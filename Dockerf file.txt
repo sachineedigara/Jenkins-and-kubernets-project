@@ -1,0 +1,9 @@
+FROM node:14
+WORKDIR /app
+COPY . .
+
+RUN npm install
+
+# Expose API_KEY as an environment variable during runtime
+EXPOSE 80
+CMD ["node", "app/server.js"]
